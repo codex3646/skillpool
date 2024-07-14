@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillpool</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        nav {
+            background-color: cornflowerblue;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .explore-skills {
+            background-color: #FF5733;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .skill-box {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .skill-box:hover {
+            opacity: 0.8;
+        }
+        section {
+            background-color: #d38740;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        section h2 {
+            color: #6c2bdc;
+            margin-bottom: 10px;
+        }
+        section p {
+            color: #32093d;
+            line-height: 1.6;
+        }
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: cornflowerblue;
+                padding: 10px 0;
+                text-align: center;
+                z-index: 1;
+                flex-direction: column;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Skillpool</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#uses">Uses</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="explore-skills">
+            <h1>Explore Skills with Skillpool</h1>
+        </div>
+
+        <div class="skills">
+            <a class="skill-box" style="background-color: #9ff107;" href="python.html">Python</a>
+            <a class="skill-box" style="background-color: #9ff107;" href="java.html">Java</a>
+            <a class="skill-box" style="background-color: #72ac06;" href="ai.html">AI</a>
+            <a class="skill-box" style="background-color: #72ac06;" href="react.html">React JS</a>
+            <a class="skill-box" style="background-color: #476c03;" href="javascript.html">JavaScript</a>
+            <a class="skill-box" style="background-color: #476c03;" href="dsa.html">DSA</a>
+            <a class="skill-box" style="background-color: #2e4603;" href="html.html">HTML</a>
+            <a class="skill-box" style="background-color: #203102;" href="css.html">CSS</a>
+            <a class="skill-box" style="background-color: #203102;" href="sql.html">SQL</a>
+        </div>
+
+        <section id="uses">
+            <h2>Uses of These Languages</h2>
+        </section>
+        <section id="python">
+            <p>
+                
+                <h2>Python</h2>
+        <p>
+            Python is versatile and widely used for various applications:
+        </p>
+        <ul>
+            <li>Web Development with frameworks like Django and Flask.</li>
+            <li>Data Science and machine learning using libraries such as NumPy, Pandas, and scikit-learn.</li>
+            <li>Automation and backend development.</li>
+        </ul>
+    </section>
+
+    <section id="java">
+        <h2>Java</h2>
+        <p>
+            Java is prominent in enterprise and Android development:
+        </p>
+        <ul>
+            <li>Backend systems for large-scale applications.</li>
+            <li>Android app development with Android SDK.</li>
+            <li>Web development with frameworks like Spring.</li>
+        </ul>
+    </section>
+
+    <section id="web-development">
+        <h2>Web Development</h2>
+        <p>
+            Web development involves both frontend and backend technologies:
+        </p>
+        <ul>
+            <li>Creating interactive user interfaces with HTML, CSS, and JavaScript.</li>
+            <li>Backend development with languages like Node.js, PHP, Python (Django), and Ruby on Rails.</li>
+            <li>Building full-stack applications integrating frontend and backend technologies.</li>
+        </ul>
+    </section>
+
+    <section id="ai">
+        <h2>AI (Artificial Intelligence)</h2>
+        <p>
+            AI encompasses various domains for intelligent applications:
+        </p>
+        <ul>
+            <li>Machine Learning for predictive analytics and pattern recognition.</li>
+            <li>Natural Language Processing (NLP) for understanding and generating human language.</li>
+            <li>Computer Vision for image and video analysis.</li>
+        </ul>
+    </section>
+
+    <section id="react-js">
+        <h2>React JS</h2>
+        <p>
+            React JS is a popular frontend framework for building interactive user interfaces:
+        </p>
+        <ul>
+            <li>Developing single-page applications (SPAs) with efficient component-based architecture.</li>
+            <li>Reusable UI components for scalability and maintainability.</li>
+            <li>Integration with backend technologies for full-stack development.</li>
+        </ul>
+    </section>
+
+    <section id="javascript">
+        <h2>JavaScript</h2>
+        <p>
+            JavaScript is fundamental in web development and beyond:
+        </p>
+        <ul>
+            <li>Frontend development for dynamic and interactive web pages.</li>
+            <li>Backend development with Node.js.</li>
+            <li>Cross-platform development with frameworks like React Native.</li>
+        </ul>
+    </section>
+
+    <section id="dsa">
+        <h2>DSA (Data Structures and Algorithms)</h2>
+        <p>
+            DSA is essential for efficient problem-solving and data management:
+        </p>
+        <ul>
+            <li>Optimizing algorithms for performance and scalability.</li>
+            <li>Managing data structures for efficient storage and retrieval.</li>
+            <li>Designing algorithms for tasks like sorting, searching, and graph traversal.</li>
+        </ul>
+    </section>
+
+    <section id="html">
+        <h2>HTML</h2>
+        <p>
+            HTML defines the structure of web pages:
+        </p>
+        <ul>
+            <li>Creating elements and organizing content.</li>
+            <li>Semantic markup for accessibility and SEO.</li>
+            <li>Integrating with CSS and JavaScript for interactive web experiences.</li>
+        </ul>
+    </section>
+
+    <section id="css">
+        <h2>CSS</h2>
+        <p>
+            CSS enhances the visual presentation of web pages:
+        </p>
+        <ul>
+            <li>Styling elements and layouts.</li>
+            <li>Responsive design for various screen sizes.</li>
+            <li>Adding animations and effects for user engagement.</li>
+        </ul>
+    </section>
+
+    <section id="sql">
+        <h2>SQL</h2>
+        <p>
+            SQL manages relational databases and data manipulation:
+        </p>
+        <ul>
+            <li>Storing and retrieving data efficiently.</li>
+            <li>Querying databases for data manipulation and retrieval.</li>
+            <li>Ensuring data integrity and security.</li>
+        </ul>  </section>
+
+        <section id="about" style="background-color: #a677f8;">
+            <h2>About me</h2>
+            <p>Anish shetty</p>
+            <p>2nd year</p>
+            <p>B.Tech in computer science</p>
+        </section>
+
+        <section id="contact"  style="background-color: #a683e1;">
+            <h2>Contact Us</h2>
+            <p>linkedin: anish shetty</p>
+            <p>instagram: anish_shetty_52</p>
+        </section>
+    </div>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

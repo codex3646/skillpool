@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+nav {
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 24px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.container {
+    padding: 20px;
+}
+
+.explore-skills {
+    background-color: #ffd700;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: #00008b;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.skill-box {
+    background-color: #e0e0e0;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, #ff6f61, #de507b, #9561de, #61de96);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skill-box {
+        flex: 1 1 100%;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .skills {
+        flex-direction: row;
+    }
+
+    .skill-box {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
